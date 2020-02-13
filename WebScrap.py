@@ -36,8 +36,11 @@ def main():
     df = pd.DataFrame(data)
     df = df[2:-1]
     plt.style.use('seaborn')
-    df.columns = ["Date","Suspects","Confirmed","ConfirmedCumulative","DailyIncreaseInConfirmedCases","Serious",
-                  "Deaths","Recovered","Deaths+Recovered","Death/RecoveryRatio","Death/Recovery(Incremental)","DeathToCulumative","RDRatio","Quarantined",
+    df.columns = ["Date","Suspects","Active Cases","DailyIncreaseInActive","ConfirmedCumulative",
+                  "DailyIncreaseInConfirmedCases","Serious","Serious%",
+                  "Deaths","Recovered","Deaths+Recovered",
+                  "Death/RecoveryRatio","Death/Recovery(Incremental)",
+                  "DeathToCulumative","RDRatio","Quarantined",
                   "ReleasedOnTheDay",
             "Released(Cumulative)","Total","Source"]
     dates=[]
